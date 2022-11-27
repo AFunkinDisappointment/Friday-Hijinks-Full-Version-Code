@@ -1,0 +1,153 @@
+function start(song) {
+    setDefaultZoom(0.8);
+
+    getHaxeActor("bf").x += 200;
+    getHaxeActor("bf").y += 120;
+    getHaxeActor("bf").followCamX -= 120;
+    getHaxeActor("bf").followCamY -= 50;
+    getHaxeActor("gf").x -= 50;
+    getHaxeActor("gf").y += 80;
+    getHaxeActor("dad").x -= 200;
+    getHaxeActor("dad").y += 120;
+
+    // char swap offsets [0 = bf.x, 1 = bf.y, 2 = gf.x, 3 = gf.y, 4 = dad.x, 5 = dad.y];
+    swapOffsets[0] += 200;
+    swapOffsets[1] += 120;
+    swapOffsets[2] -= 50;
+    swapOffsets[3] += 80;
+    swapOffsets[4] -= 200;
+    swapOffsets[5] += 120;
+
+    switch(songData.stageID) {
+	case 1:
+    	    getHaxeActor("bf").x += 30;
+    	    getHaxeActor("bf").y += 50;
+    	    getHaxeActor("dad").x -= 30;
+    	    getHaxeActor("dad").y += 50;
+    	    swapOffsets[0] += 30;
+    	    swapOffsets[1] += 50;
+    	    swapOffsets[4] -= 30;
+    	    swapOffsets[5] += 50;
+
+    	    var floor = new FlxSprite(-600, -500).loadGraphic(hscriptPath + 'basement floor.png');
+    	    floor.antialiasing = true;
+    	    addSprite(floor, BEHIND_ALL);
+
+    	    var bg = new FlxSprite(-600, -500).loadGraphic(hscriptPath + 'basement wall.png');
+    	    bg.scrollFactor.set(0.95, 1);
+    	    bg.antialiasing = true;
+    	    addSprite(bg, BEHIND_ALL);
+
+	    updateUV('daStage', [floor, bg]);
+	case 42:
+    	    var bg = new FlxSprite(-600, -200).loadGraphic(hscriptPath + 'mansionOLD.png');
+    	    bg.antialiasing = true;
+    	    addSprite(bg, BEHIND_ALL);
+	    updateUV('daStage', [bg]);
+	default:
+    	    var floor = new FlxSprite(-600, -200).loadGraphic(hscriptPath + 'Mansion Floor.png');
+    	    floor.antialiasing = true;
+    	    addSprite(floor, BEHIND_ALL);
+
+    	    var otherBg = new FlxSprite(-600, -200).loadGraphic(hscriptPath + 'Mansion OtherBG.png');
+    	    otherBg.scrollFactor.set(0.85, 0.9);
+    	    otherBg.antialiasing = true;
+    	    addSprite(otherBg, BEHIND_ALL);
+
+    	    var bg = new FlxSprite(-600, -200).loadGraphic(hscriptPath + 'Mansion Background.png');
+    	    bg.scrollFactor.set(0.95, 1);
+    	    bg.antialiasing = true;
+    	    addSprite(bg, BEHIND_ALL);
+	
+	    updateUV('daStage', [floor, otherBg, bg]);
+    }
+}
+
+var darkenOffset = 16;
+var darkening = false;
+function beatHit(beat)
+{
+    //darkenOffset -= 1;
+}
+
+/*function ghostKill() {
+    new FlxTimer().start(2.5, function(tmr) {
+        dad.x = boyfriend.x - 450;
+        dad.alpha = 1;
+        dad.playAnim('singUP');
+        FlxG.sound.play(FNFAssets.getSound(hscriptPath + 'machete-swing.ogg'));
+        new FlxTimer().start(0.6, function(tmr) {
+            FlxG.sound.play(FNFAssets.getSound(hscriptPath + 'machete-hit.ogg'));
+            healthChange(0);
+        });
+    });
+}
+
+var flashReady = true;
+var flashDelay = 3;
+function rechargeFlash() {
+    new FlxTimer().start(flashDelay, function(tmr) {
+	flashReady = true;
+    });
+}*/
+
+var alreadyDead = false;
+function update(elapsed)
+{
+     /*if (FlxG.keys.justPressed.SPACE && flashReady) {
+        FlxG.sound.play(FNFAssets.getSound(hscriptPath + 'flashlight-click.ogg'));
+        if (darkening) {
+            darkening = false;
+	    dad.alpha = 1;
+            flashDelay = 4;
+            healthChange(0.2, true); //I had to code it in, ok? Health isn't a easy thing to change.
+        } else {
+	    flashDelay += 0.5;
+	    healthChange(-0.4, true);
+        }
+        flashReady = false;
+        rechargeFlash();
+     }
+     if (darkenOffset <= 0) {
+	//darkening = true;
+        darkenOffset = FlxG.random.int(20, 28);
+     }
+     if (dad.alpha <= 0 && !alreadyDead) {
+        alreadyDead = true;
+        darkening = false;
+        FlxG.sound.play(FNFAssets.getSound(hscriptPath + 'woosh-start.ogg'));
+	ghostKill();
+     }*/
+}
+
+function stepHit(step)
+{
+    /*if (darkening && dad.alpha > 0) {
+	dad.alpha -= 0.05;
+    }*/
+}
+
+function playerTwoTurn()
+{
+}
+
+function playerTwoMiss()
+{
+}
+
+function playerTwoSing()
+{
+}
+
+function playerOneTurn()
+{
+}
+
+function playerOneMiss()
+{
+}
+
+function playerOneSing()
+{
+}
+

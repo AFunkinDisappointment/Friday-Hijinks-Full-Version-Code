@@ -1,0 +1,44 @@
+function init(char) {
+    var tex = FlxAtlasFrames.fromSparrow(hscriptPath + 'char.png', hscriptPath + 'char.xml');
+    
+    char.frames = tex;
+    char.animation.addByPrefix('idle', 'lemon groove', 24, false);
+    char.animation.addByPrefix('singUP', 'lemon north', 24, false);
+    char.animation.addByPrefix('singLEFT', 'lemon west', 24, false);
+    char.animation.addByPrefix('singRIGHT', 'lemon east', 24, false);
+    char.animation.addByPrefix('singDOWN', 'lemon south', 24, false);
+
+    char.addOffset('idle');
+    char.addOffset('singUP');
+    char.addOffset('singDOWN');
+    char.addOffset('singRIGHT');
+    char.addOffset('singLEFT');
+
+    char.playAnim('idle');
+
+    char.flipX = false;
+
+    char.enemyOffsetX = 0;
+    char.enemyOffsetY = 0;
+    char.playerOffsetX = -250;
+    char.playerOffsetY = -350;
+    if (char.isPlayer) {
+        char.followCamX = 50;
+        char.followCamY = 0;
+    } else {
+        char.followCamX = -125;
+        char.followCamY = 50;
+    }
+    char.midpointX = 0;
+    char.midpointY = 0;
+}
+portraitOffset = [0, 0];
+dadVar = 4;
+isPixel = false;
+function update(elapsed, char) {
+    // do nothing...
+}
+var danced = false;
+function dance(char) {
+    char.playAnim('idle');
+}

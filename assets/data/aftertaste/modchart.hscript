@@ -1,0 +1,99 @@
+var spotLightLemon;
+var spotLightBoy;
+function start(song) {
+    gfSpeed = 2;
+
+    spotLightLemon = new FlxSprite(0, -80).loadGraphic(hscriptPath + 'Thing.png');
+    spotLightLemon.alpha = 0;
+    spotLightLemon.antialiasing = true;
+    addSprite(spotLightLemon, BEHIND_BF | BEHIND_DAD);
+
+    spotLightBoy = new FlxSprite(725, -80).loadGraphic(hscriptPath + 'Thing.png');
+    spotLightBoy.alpha = 0;
+    spotLightBoy.antialiasing = true;
+    addSprite(spotLightBoy, BEHIND_BF | BEHIND_DAD);
+
+    /*playerStrums.forEach(function(spr) {
+	spr.scale.x = 1;
+          spr.scale.y = 1;
+	});
+	    enemyStrums.forEach(function(spr) {
+	spr.scale.x = 1;
+          spr.scale.y = 1;
+    	    });*/
+}
+
+function fadeOut() {
+    FlxTween.tween(FlxG.camera, {zoom: 0.9}, 4);
+    for(object in getUV('daStage')) {
+	//FlxTween.tween(object, {alpha: 0}, 2);
+	FlxTween.color(object, 2, 0xFFFFFFFF, 0xFF000000);
+    }
+    FlxTween.tween(boyfriend, {x: boyfriend.x - 150}, 1.5, {ease: FlxEase.bounceOut});
+    FlxTween.tween(dad, {x: dad.x + 150}, 1.5, {ease: FlxEase.bounceOut});
+    //FlxTween.tween(gf, {alpha: 0}, 2);
+    FlxTween.color(gf, 2, 0xFFFFFFFF, 0xFF000000);
+    FlxTween.tween(spotLightLemon, {alpha: 1}, 2);
+    FlxTween.tween(spotLightBoy, {alpha: 1}, 2);
+    FlxTween.color(boyfriend, 2, 0xFFFFFFFF, 0xFFFFFF33);
+    FlxTween.color(dad, 2, 0xFFFFFFFF, 0xFFFFFF33);
+}
+
+function fadeIn() {
+    FlxTween.tween(FlxG.camera, {zoom: 0.8}, 4);
+    for(object in getUV('daStage')) {
+	//FlxTween.tween(object, {alpha: 1}, 2);
+	FlxTween.color(object, 2, 0xFF000000, 0xFFFFFFFF);
+    }
+    FlxTween.tween(boyfriend, {x: boyfriend.x + 150}, 1.5, {ease: FlxEase.bounceOut});
+    FlxTween.tween(dad, {x: dad.x - 150}, 1.5, {ease: FlxEase.bounceOut});
+    //FlxTween.tween(gf, {alpha: 1}, 2);
+    FlxTween.color(gf, 2, 0xFF000000, 0xFFFFFFFF);
+    FlxTween.tween(spotLightLemon, {alpha: 0}, 2);
+    FlxTween.tween(spotLightBoy, {alpha: 0}, 2);
+    FlxTween.color(boyfriend, 2, 0xFFFFFF33, 0xFFFFFFFF);
+    FlxTween.color(dad, 2, 0xFFFFFF33, 0xFFFFFFFF);
+}
+
+function beatHit(beat) {
+    switch(beat) {
+	case 64:
+	    fadeOut();
+	case 144:
+	    fadeIn();
+    }
+}
+
+function update(elapsed) {
+    enemyStrums.forEach(function(spr) {
+	if (spr.animation.curAnim != null && spr.animation.curAnim.name == 'confirm' && !daNote.isPixel)
+	{
+  	    spr.centerOffsets();
+	    spr.offset.x -= 13;
+	    spr.offset.y -= 13;
+	}
+	else
+	spr.centerOffsets();
+    });
+}
+
+function stepHit(step) {
+}
+
+function playerTwoTurn() {
+}
+
+function playerTwoMiss() {
+}
+
+function playerTwoSing() {
+}
+
+function playerOneTurn() {
+}
+
+function playerOneMiss() {
+}
+
+function playerOneSing() {
+}

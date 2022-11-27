@@ -1,0 +1,105 @@
+function start(song) {
+    if (PlayState.isStoryMode)
+	currentPlayState.startCountdown();
+    else {
+    var rblxCam = new FlxCamera();
+    FlxG.cameras.add(rblxCam);
+
+    var bg = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, 0xFF2D2D2D);
+    bg.cameras = [rblxCam];
+    add(bg);
+
+    var loading = new FlxSprite(1140, 580).loadGraphic(hscriptPath + 'loading.png');
+    loading.antialiasing = true;
+    loading.cameras = [rblxCam];
+    add(loading);
+
+    // the first value in each array is the image used, 
+    // the rest are the songs the image will appear in
+    // (if this cutscene is selected)
+    var funnySongStuff = [
+	['simply lemon', 'Lemon', 'Sour-Feeling', 'Aftertaste'],
+	["reginald 'raspy' ghost", 'Eerie-Presence', 'Cloaked', 'Hijinks', 'Troubling-Past'],
+    ];
+    var hasImage = false;
+    var image = new FlxSprite(554, 218);
+    for (imager in funnySongStuff) {
+	for (i in 1...imager.length) {
+	    if (song == imager[i]) {
+		image.loadGraphic(hscriptPath + imager[0] + ".png");
+		hasImage = true;
+		break;
+	    }
+	}
+    }
+    if (hasImage = false)
+	image.loadGraphic(hscriptPath + '.png');
+    image.setGraphicSize(250, 250);
+    image.updateHitbox();
+    image.screenCenter();
+    image.y = 150;
+    image.antialiasing = true;
+    image.cameras = [rblxCam];
+    add(image);
+    
+    var daName = StringTools.replace(song, '-', ' ');
+    var nameTxt = new FlxText(0, 400, FlxG.width, daName);
+    nameTxt.alignment = 'center';
+    nameTxt.size = 40;
+    nameTxt.cameras = [rblxCam];
+    add(nameTxt);
+
+    // same as the image stuff
+    var veryRobustCreditSystem = [
+	['The Roblox Disappointment', 
+	'Eerie-Presence', 'Cloaked', 'Hijinks',
+	'Lemon', 'Sour-Feeling', 'Aftertaste',
+        'Coincidence', 'Ghastly', 'Disappointment'],
+        ['the Shaggy x Matt team | Remix by The Roblox Disappointment', 'Power-Link-Remix'],
+        ['the Tails Gets Trolled team | Cover by The Roblox Disappointment', 'High-Shovel-Cover'],
+        ['Lemon Demon | Remix by The Roblox Disappointment', 'Two-Lemons'],
+	['the Sonic.exe team | Cover by The Roblox Disappointment', 'Troubling-Past']
+    ];
+    var hasCredit = false;
+    var byTxt = new FlxText(0, 450, FlxG.width, 'By ');
+    for (buyer in veryRobustCreditSystem) {
+	for (i in 1...buyer.length) {
+	    if (song == buyer[i]) {
+		byTxt.text += buyer[0];
+		hasCredit = true;
+		break;
+	    }
+	}
+    }
+    if (hasCredit = false)
+	byTxt.text += '[Content Deleted]';
+    byTxt.size = 12;
+    byTxt.alignment = 'center';
+    byTxt.cameras = [rblxCam];
+    add(byTxt);
+
+    var joiningTxt = new FlxText(0, 470, FlxG.width, 'Loading song');
+    joiningTxt.alignment = 'center';
+    joiningTxt.cameras = [rblxCam];
+    add(joiningTxt);
+
+    new FlxTimer().start(0.5, function(tmr) {
+    	FlxTween.tween(loading, {angle: loading.angle + 360}, 1.5, {
+	    ease: FlxEase.backInOut,
+	    onComplete: function(twn) {
+	    	tmr.reset(1);
+    	    }
+    	});
+    });
+
+    var randomTimeBecauseFunkYourFreeTime = FlxG.random.int(5, 10);
+    new FlxTimer().start(randomTimeBecauseFunkYourFreeTime, function(tmr) {
+	currentPlayState.startCountdown();
+	FlxTween.tween(rblxCam, {alpha: 0}, 0.5, {
+	    onComplete: function(twn) {
+            	FlxG.cameras.remove(rblxCam);
+            }
+	});
+    });
+    }
+}

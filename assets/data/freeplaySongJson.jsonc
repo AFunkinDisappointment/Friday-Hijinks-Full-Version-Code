@@ -1,0 +1,72 @@
+[
+  {
+    "name" : "All"
+    "songs" : [
+     {
+       "week" : -1,
+       "character" : "bf",
+       "name" : "Random-Song"
+     }
+    ]
+  },
+  {
+    "name": "Friday Hijinks",
+    "songs": [
+      {
+        "name": "Tutorial",
+        "character": "gf",
+        "week": 0
+      },
+      {
+	"name": "Eerie-Presence",
+        "character": "raspy",
+        "week": 1
+      },
+      {
+	"name": "Cloaked",
+        "character": "raspy",
+        "week": 1
+      },
+      {
+	"name": "Hijinks",
+        "character": "raspy",
+        "week": 1
+      },
+      {
+	"name": "Lemon",
+        "character": "lemon-creature",
+        "week": 2
+      },
+      {
+	"name": "Sour-Feeling",
+        "character": "lemon-creature",
+        "week": 2
+      },
+      {
+	"name": "Aftertaste",
+        "character": "lemon-creature",
+        "week": 2
+      }
+    ]
+  },
+  {
+    "name": "Extra",
+    "songs": [
+      {
+	"name": "Power-Link-Remix",
+        "character": "shaggy-red",
+        "week": 1
+      },
+      {
+	"name": "High-Jinks",
+        "character": "lemon-creature-speaker",
+        "week": 2
+      },
+      {
+	"name": "Two-Lemons",
+        "character": "monster",
+        "week": 2
+      },
+    ]
+  }
+]

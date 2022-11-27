@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="bfPortrait.png">
+	<!-- Created with Adobe Animate version 20.0.0.17400 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="default0000" x="0" y="0" width="249" height="145"/>
+	<SubTexture name="default0001" x="259" y="0" width="249" height="145"/>
+	<SubTexture name="default0002" x="259" y="0" width="249" height="145"/>
+	<SubTexture name="default0003" x="0" y="155" width="249" height="145"/>
+	<SubTexture name="default0004" x="0" y="155" width="249" height="145"/>
+	<SubTexture name="default0005" x="259" y="155" width="249" height="145"/>
+	<SubTexture name="default0006" x="259" y="155" width="249" height="145"/>
+	<SubTexture name="default0007" x="259" y="155" width="249" height="145"/>
+	<SubTexture name="default0008" x="259" y="155" width="249" height="145"/>
+</TextureAtlas>

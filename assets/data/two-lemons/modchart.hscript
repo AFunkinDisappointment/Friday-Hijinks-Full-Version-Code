@@ -1,0 +1,452 @@
+var lightA;
+var lightB;
+function start(song) {
+    lightA = new FlxSprite(dad.x - 50, dad.y - 500).loadGraphic(hscriptPath + 'Thing.png');
+    lightA.scale.x = 1.2;
+    lightA.scale.y = 1.2;
+    lightA.antialiasing = true;
+    lightA.alpha = 0;
+    addSprite(lightA, BEHIND_ALL);
+
+    lightB = new FlxSprite(boyfriend.x - 125, lightA.y).loadGraphic(hscriptPath + 'Thing.png');
+    lightB.flipX = true;
+    lightB.scale.x = 1.2;
+    lightB.scale.y = 1.2;
+    lightB.antialiasing = true;
+    lightB.alpha = 0;
+    addSprite(lightB, BEHIND_ALL);
+}
+
+var lastFlash = -1;
+var daDifference = (playerStrums.members[0].x - enemyStrums.members[0].x) / 2;
+function beatHit(beat)
+{
+   switch(beat) {
+	case 101:
+	    focusNotes(false);
+	case 116:
+	    unfocusNotes(false, false);
+	case 117:
+	    focusNotes(true);
+	case 132:
+	    unfocusNotes(true, false);
+	case 182:
+	    playerStrums.forEach(function(spr) {
+	    	FlxTween.tween(spr, {x: spr.x - daDifference}, 0.5, {ease: FlxEase.backIn});
+    	    });
+	    enemyStrums.forEach(function(spr) {
+	    	FlxTween.tween(spr, {x: spr.x + daDifference}, 0.5, {ease: FlxEase.backIn});
+    	    });
+	case 197:
+	    playerStrums.forEach(function(spr) {
+	   	FlxTween.tween(spr, {x: spr.x + daDifference}, 0.5, {ease: FlxEase.backOut});
+	    	FlxTween.tween(spr.scale, {y: 0.35}, 0.5);
+    	    });
+	    enemyStrums.forEach(function(spr) {
+	    	FlxTween.tween(spr, {x: spr.x - daDifference}, 0.5, {ease: FlxEase.backOut});
+	    	FlxTween.tween(spr.scale, {y: 0.35}, 0.5);
+    	    });
+	    FlxTween.tween(FlxG.camera, {angle: -5, zoom: 1}, 1, {ease: FlxEase.backOut});
+	    FlxTween.tween(camHUD, {angle: -2}, 1, {ease: FlxEase.backOut});
+	case 212:
+	    FlxTween.tween(FlxG.camera, {angle: 5}, 1, {ease: FlxEase.backOut});
+	    FlxTween.tween(camHUD, {angle: 2}, 1, {ease: FlxEase.backOut});
+	case 228:
+	    FlxTween.tween(FlxG.camera, {angle: -5}, 1, {ease: FlxEase.backOut});
+	    FlxTween.tween(camHUD, {angle: -2}, 1, {ease: FlxEase.backOut});
+	case 230:
+	    playerStrums.forEach(function(spr) {
+	    	FlxTween.tween(spr.scale, {y: 0.7}, 0.3, {ease: FlxEase.backOut});
+    	    });
+	    enemyStrums.forEach(function(spr) {
+	    	FlxTween.tween(spr.scale, {y: 0.7}, 0.3, {ease: FlxEase.backOut});
+    	    });
+	    FlxTween.tween(FlxG.camera, {angle: 0, zoom: 0.8}, 0.3, {ease: FlxEase.backOut});
+	    FlxTween.tween(camHUD, {angle: 0}, 0.3, {ease: FlxEase.backOut});
+	case 261:
+	    focusNotes(false);
+	case 276:
+	    unfocusNotes(false, false);
+	case 277:
+	    focusNotes(true);
+	case 315:
+	    unfocusNotes(true, true);
+	case 364:
+	    setDefaultZoom(0.7);
+	    camHUD.flash(0xFF000000, 1);
+	    dad.color = 0xFF505050;
+	    boyfriend.color = 0xFF505050;
+	    for(object in getUV('daStage')) {
+		object.color = 0xFF222222;
+    	    }
+	case 428:
+	    setDefaultZoom(0.8);
+	    camHUD.flash(0xFF000000, 1);
+	    dad.color = 0xFFFFFFFF;
+	    boyfriend.color = 0xFFFFFFFF;
+	    for(object in getUV('daStage')) {
+		object.color = 0xFFFFFFFF;
+    	    }
+   }
+
+   if (beat >= 364 && beat < 428) {
+	FlxG.camera.zoom += 0.05;
+	camHUD.zoom += 0.05;
+	if (beat % 2 == 1) {
+	var flashColor = 0xFF000000;
+	var randNum = FlxG.random.int(0, 3);
+        if (randNum == lastFlash) {
+	    randNum = (randNum + 1) % 4;
+        }
+	lastFlash = randNum;
+        switch(randNum) {
+	    case 0:
+	    	flashColor = 0xFFC24B99;
+	    case 1:
+	    	flashColor = 0xFF00FFFF;
+	    case 2:
+	    	flashColor = 0xFF12FA05;
+	    case 3:
+	    	flashColor = 0xFFF9393F;
+	}
+        lightA.alpha = 1;
+        lightB.alpha = 1;
+	lightA.color = flashColor;
+        lightB.color = flashColor;
+	charFlash(dad, flashColor);
+	charFlash(boyfriend, flashColor);
+        FlxTween.tween(lightA, {alpha: 0}, 0.5);
+        FlxTween.tween(lightB, {alpha: 0}, 0.5);
+	}
+   }
+
+   if (beat >= 364 && beat < 396) {
+       switch(beat % 4) {
+	    case 0:
+	        noteDance(1);
+	    case 1:
+	        noteSpin();
+	    case 2:
+	        noteDance(-1);
+	    case 3:
+	        noteSpin();
+       }
+   } else if ((beat >= 300 && beat < 364) || (beat >= 396 && beat < 428)) {
+	switch(beat) {
+	    case 317:
+		noteSpin();
+	    case 321:
+		noteSpin();
+	    case 325:
+		noteSpin();
+	    case 329:
+		noteSpin();
+
+	    case 347:
+	    	noteBop(2.5, 0.4);
+		noteSpin();
+	    case 363:
+	        noteBop(2.5, 0.4);
+		noteSpin();
+	    case 396:
+		noteBop(2.5, 0.4);
+		noteSpin();
+	    case 400:
+		noteBop(2.5, 0.4);
+		noteSpin();
+	    case 404:
+		noteBop(2.5, 0.4);
+		noteSpin();
+	    case 412:
+		noteBop(2.5, 0.4);
+		noteSpin();
+	    case 416:
+		noteBop(2.5, 0.4);
+		noteSpin();
+	    case 420:
+		noteBop(2.5, 0.4);
+		noteSpin();
+	    default:
+	    	noteBop(1, 0.3);
+   	}
+   }
+}
+
+function stepHit(step) {
+    switch(step) {
+	case 1170:
+	    noteBop(1, 0.1);
+	    enemyStrums.forEach(function(spr) {
+	    	FlxTween.tween(spr, {x: spr.x - 100}, 0.1);
+    	    });
+	case 1172:
+	    noteBop(1, 0.1);
+	    enemyStrums.forEach(function(spr) {
+	    	FlxTween.tween(spr, {x: spr.x - 100}, 0.1);
+    	    });
+	case 1178:
+	    noteBop(1, 0.1);
+            enemyStrums.forEach(function(spr) {
+	    	FlxTween.tween(spr, {x: spr.x - 100}, 0.1);
+    	    });
+	case 1180:
+	    noteBop(1, 0.1);
+            enemyStrums.forEach(function(spr) {
+	    	FlxTween.tween(spr, {x: spr.x - 100}, 0.1);
+    	    });
+
+	case 1594:
+	    noteOffset(-25);
+	case 1596:
+	    noteOffset(50);
+	case 1598:
+	    noteOffset(-50);
+	case 1600:
+	    noteOffset(25);
+
+	case 1610:
+	    noteOffset(-25);
+	case 1612:
+	    noteOffset(50);
+	case 1614:
+	    noteOffset(-50);
+	case 1616:
+	    noteOffset(25);
+
+	case 1626:
+	    noteOffset(-25);
+	case 1628:
+	    noteOffset(50);
+	case 1630:
+	    noteOffset(-50);
+	case 1634:
+	    noteOffset(50);
+	case 1636:
+	    noteOffset(-50);
+	case 1638:
+	    noteOffset(50);
+	case 1642:
+	    noteOffset(-50);
+	case 1644:
+	    noteOffset(50);
+	case 1646:
+	    noteOffset(-50);
+	case 1648:
+	    noteOffset(25);
+
+	case 1658:
+	    noteOffset(-25);
+	case 1660:
+	    noteOffset(50);
+	case 1662:
+	    noteOffset(-50);
+	case 1664:
+	    noteOffset(25);
+
+	case 1674:
+	    noteOffset(-25);
+	case 1676:
+	    noteOffset(50);
+	case 1678:
+	    noteOffset(-50);
+	case 1680:
+	    noteOffset(25);
+
+	case 1690:
+	    noteOffset(-25);
+	case 1692:
+	    noteOffset(50);
+	case 1694:
+	    noteOffset(-50);
+	case 1698:
+	    noteOffset(50);
+	case 1700:
+	    noteOffset(-50);
+	case 1702:
+	    noteOffset(50);
+	case 1706:
+	    noteOffset(-50);
+	case 1708:
+	    noteOffset(50);
+	case 1710:
+	    noteOffset(-50);
+	case 1712:
+	    noteOffset(25);
+    }
+}
+
+function noteSpin() {
+    playerStrums.forEach(function(spr) {
+	FlxTween.tween(spr, {angle: 360}, 0.5, {ease: FlxEase.backOut,
+	    onComplete: function(tween) {
+	        spr.angle = 0;
+	    }
+	});
+    });
+    enemyStrums.forEach(function(spr) {
+	FlxTween.tween(spr, {angle: 360}, 0.5, {ease: FlxEase.backOut,
+	    onComplete: function(tween) {
+	        spr.angle = 0;
+	    }
+	});
+    });
+}
+
+function noteDance(direction) {
+    playerStrums.forEach(function(spr) {
+	var funny = spr.x;
+	spr.x += 30 * direction;
+	FlxTween.tween(spr, {x: funny}, 0.3);
+    });
+    enemyStrums.forEach(function(spr) {
+	var funny = spr.x;
+	spr.x += 30 * direction;
+	FlxTween.tween(spr, {x: funny}, 0.3);
+    });
+}
+
+function noteBop(strength, time) {
+    playerStrums.forEach(function(spr) {
+	var funny = spr.y;
+	spr.y -= 20 * strength;
+	FlxTween.tween(spr, {y: funny}, time);
+    });
+    enemyStrums.forEach(function(spr) {
+	var funny = spr.y;
+	spr.y -= 20 * strength;
+	FlxTween.tween(spr, {y: funny}, time);
+    });
+}
+
+function noteOffset(amount) {
+    playerStrums.forEach(function(spr) {
+	FlxTween.tween(spr, {x: spr.x + amount}, 0.1);
+    });
+    enemyStrums.forEach(function(spr) {
+	FlxTween.tween(spr, {x: spr.x + amount}, 0.1);
+    });
+}
+
+function charFlash(char, flashcolor) {
+    char.color = flashcolor;
+    FlxTween.color(char, 0.5, flashcolor, 0xFF505050);
+}
+
+function focusNotes(player) {
+    if (player) {
+        playerStrums.forEach(function(spr) {
+	    FlxTween.tween(spr, {x: spr.x - daDifference}, 0.5, {ease: FlxEase.backIn});
+        });
+	enemyStrums.forEach(function(spr) {
+	    var thingy = 0;
+	    switch(spr.ID) {
+		case 0:
+		    thingy = 55;
+		case 1:
+		    thingy = 20;
+		case 2:
+		    thingy = -20;
+		case 3:
+		    thingy = -55;
+	    }
+	    FlxTween.tween(spr, {x: spr.x - 100 + thingy}, 0.5, {ease: FlxEase.backIn});
+	    FlxTween.tween(spr.scale, {x: 0.45, y: 0.45}, 0.5, {ease: FlxEase.backIn});
+        });
+    } else {
+        enemyStrums.forEach(function(spr) {
+	    FlxTween.tween(spr, {x: spr.x + daDifference}, 0.5, {ease: FlxEase.backIn});
+        });
+	playerStrums.forEach(function(spr) {
+	    var thingy = 0;
+	    switch(spr.ID) {
+		case 0:
+		    thingy = 55;
+		case 1:
+		    thingy = 20;
+		case 2:
+		    thingy = -20;
+		case 3:
+		    thingy = -55;
+	    }
+	    FlxTween.tween(spr, {x: spr.x + 100 + thingy}, 0.5, {ease: FlxEase.backIn});
+	    FlxTween.tween(spr.scale, {x: 0.45, y: 0.45}, 0.5, {ease: FlxEase.backIn});
+        });
+    }
+}
+
+function unfocusNotes(player, endOfSolo) {
+    var offset = 0;
+    if (endOfSolo == true)
+	offset = 400;
+    if (player) {
+        playerStrums.forEach(function(spr) {
+	    FlxTween.tween(spr, {x: spr.x + daDifference}, 0.5, {ease: FlxEase.backOut});
+        });
+	enemyStrums.forEach(function(spr) {
+	    var thingy = 0;
+	    switch(spr.ID) {
+		case 0:
+		    thingy = 55;
+		case 1:
+		    thingy = 20;
+		case 2:
+		    thingy = -20;
+		case 3:
+		    thingy = -55;
+	    }
+	    FlxTween.tween(spr, {x: spr.x + 100 + offset - thingy}, 0.5, {ease: FlxEase.backOut});
+	    FlxTween.tween(spr.scale, {x: 0.7, y: 0.7}, 0.5, {ease: FlxEase.backOut});
+        });
+    } else {
+        enemyStrums.forEach(function(spr) {
+	    FlxTween.tween(spr, {x: spr.x - daDifference}, 0.5, {ease: FlxEase.backOut});
+        });
+	playerStrums.forEach(function(spr) {
+	    var thingy = 0;
+	    switch(spr.ID) {
+		case 0:
+		    thingy = 55;
+		case 1:
+		    thingy = 20;
+		case 2:
+		    thingy = -20;
+		case 3:
+		    thingy = -55;
+	    }
+	    FlxTween.tween(spr, {x: spr.x - 100 - thingy}, 0.5, {ease: FlxEase.backOut});
+	    FlxTween.tween(spr.scale, {x: 0.7, y: 0.7}, 0.5, {ease: FlxEase.backOut});
+        });
+    }
+}
+
+function update(elapsed) {
+    if (curBeat >= 364) {
+    FlxG.camera.zoom = FlxMath.lerp(currentPlayState.defaultCamZoom, FlxG.camera.zoom, 0.95);
+    camHUD.zoom = FlxMath.lerp(1, camHUD.zoom, 0.95);
+    }
+}
+
+function playerTwoTurn()
+{
+    
+}
+
+function playerTwoMiss()
+{
+}
+
+function playerTwoSing()
+{
+}
+
+function playerOneTurn()
+{
+}
+
+function playerOneMiss()
+{
+}
+
+function playerOneSing()
+{
+}

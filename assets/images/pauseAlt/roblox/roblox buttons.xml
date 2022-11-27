@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="roblox buttons.png">
+	<!-- Created with Adobe Animate version 20.0.0.17400 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="resetCharA0000" x="0" y="0" width="252" height="62"/>
+	<SubTexture name="resetCharB0000" x="0" y="62" width="252" height="62"/>
+	<SubTexture name="leaveA0000" x="252" y="0" width="252" height="62"/>
+	<SubTexture name="leaveB0000" x="252" y="62" width="252" height="62"/>
+	<SubTexture name="resumeA0000" x="504" y="0" width="252" height="62"/>
+	<SubTexture name="resumeB0000" x="504" y="62" width="252" height="62"/>
+</TextureAtlas>

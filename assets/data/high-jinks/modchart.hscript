@@ -1,0 +1,74 @@
+var playerSX = [];
+var enemySX = [];
+var playerSY = [];
+var enemySY = [];
+function start(song) {
+    playerStrums.forEach(function(spr) {
+	playerSX[spr.ID] = spr.x;
+	playerSY[spr.ID] = spr.y;
+    });
+    enemyStrums.forEach(function(spr) {
+	enemySX[spr.ID] = spr.x;
+	enemySY[spr.ID] = spr.y;
+    });
+}
+
+var alphaness = -700;
+function beatHit(beat)
+{
+    if (beat == 287) {
+        new FlxTimer().start(0.01, function(tmr) {
+	    alphaness += 5;
+
+	    if (alphaness < 150) {
+	    	tmr.reset(0.01);
+	    } else {
+	    	alphaness = 150;
+	    }
+       	});
+    }
+}
+var neg = downscroll ? -1 : 1;
+function update(elapsed) {
+    playerStrums.forEach(function(spr) {
+	spr.x = playerSX[spr.ID] + Math.sin(Conductor.songPosition/300 + spr.ID + 1)*6;
+	spr.y = playerSY[spr.ID] + Math.sin(Conductor.songPosition/400 + spr.ID + 1)*6;
+    });
+    enemyStrums.forEach(function(spr) {
+	spr.x = enemySX[spr.ID] + Math.sin(Conductor.songPosition/300 + spr.ID)*6;
+	spr.y = enemySY[spr.ID] + Math.sin(Conductor.songPosition/400 + spr.ID)*6;
+    });
+    currentPlayState.notes.forEachAlive(function(daNote) { // this is just the vanish notes reversed lol
+	var daNoteStrums = daNote.mustPress ? playerStrums : enemyStrums;
+    	daNote.alpha = FlxMath.remapToRange(neg*daNote.y + alphaness, neg*daNoteStrums.members[Math.floor(Math.abs(daNote.noteData))].y, FlxG.height, 1, 0);
+    });
+}
+
+function stepHit(step)
+{
+}
+
+function playerTwoTurn()
+{
+    
+}
+
+function playerTwoMiss()
+{
+}
+
+function playerTwoSing()
+{
+}
+
+function playerOneTurn()
+{
+}
+
+function playerOneMiss()
+{
+}
+
+function playerOneSing()
+{
+}

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="roblox menu.png">
+	<!-- Created with Adobe Animate version 20.0.0.17400 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="no0000" x="0" y="0" width="170" height="240"/>
+	<SubTexture name="yes0000" x="170" y="0" width="170" height="240"/>
+	<SubTexture name="maybe0000" x="340" y="0" width="30" height="240"/>
+</TextureAtlas>

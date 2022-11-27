@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="roblox menu.png">
+	<!-- Created with Adobe Animate version 20.0.0.17400 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="sectionMenu0000" x="0" y="0" width="800" height="60"/>
+	<SubTexture name="sectionMenu10000" x="0" y="60" width="800" height="60"/>
+	<SubTexture name="sectionMenu20000" x="0" y="120" width="800" height="60"/>
+	<SubTexture name="sectionMenu30000" x="0" y="180" width="800" height="60"/>
+	<SubTexture name="sectionMenu40000" x="0" y="240" width="800" height="60"/>
+</TextureAtlas>

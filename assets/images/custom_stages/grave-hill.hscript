@@ -1,0 +1,67 @@
+function start(song) {
+    setDefaultZoom(0.8);
+
+    gf.visible = false;
+    boyfriend.color = 0xFF646464;
+    dad.color = 0xFF646464;
+    boyfriend.x += 100;
+    dad.x -= 100;
+
+    // char swap offsets [0 = bf.x, 1 = bf.y, 2 = gf.x, 3 = gf.y, 4 = dad.x, 5 = dad.y];
+    swapOffsets[0] += 100;
+    swapOffsets[4] -= 100;
+
+    var bg = new FlxSprite(-750, 50).loadGraphic(hscriptPath + 'sky.png');
+    bg.setGraphicSize(Std.int(bg.width * 1.2));
+    bg.scrollFactor.set(0.1, 0.1);
+    bg.antialiasing = true;
+    addSprite(bg, BEHIND_ALL);
+
+    var hill = new FlxSprite(-720, -150).loadGraphic(hscriptPath + 'grave.png');
+    hill.setGraphicSize(Std.int(hill.width * 0.8));
+    hill.antialiasing = true;
+    addSprite(hill, BEHIND_ALL);
+}
+
+
+function beatHit(beat)
+{
+
+}
+
+function update(elapsed)
+{
+    if (dad.color == 0xFFFFFFFF || boyfriend.color == 0xFFFFFFFF) {
+        dad.color = 0xFF646464;
+        boyfriend.color = 0xFF646464;
+    }
+}
+
+function stepHit(step)
+{
+}
+
+function playerTwoTurn()
+{
+}
+
+function playerTwoMiss()
+{
+}
+
+function playerTwoSing()
+{
+}
+
+function playerOneTurn()
+{
+}
+
+function playerOneMiss()
+{
+}
+
+function playerOneSing()
+{
+}
+

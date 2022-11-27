@@ -1,0 +1,79 @@
+{
+  // Base Game
+  "bf": {
+    "like": "bf",
+    "icons": [0,1,2,3],
+    "colors": ["#149DFF"]
+  },
+  "gf": {
+    "like": "gf",
+    "icons": [0,1,2,3],
+    "colors": ["#EE19D9"]
+  },
+  "dad": {
+    "like": "dad",
+    "icons": [0,1,2,3],
+    "colors": ["#A200CA"] 
+  },
+  "monster": {
+    "like": "newmonster",
+    "icons": [0,1,2],
+    "colors": ["#F2D046"]
+  },
+
+  // Friday Hijinks
+  "raspy": {
+    "like": "raspy",
+    "icons": [0,1,1,2],
+    "colors": ["#262321"]
+  },
+  "raspy-angry": {
+    "like": "raspy",
+    "icons": [0,1,1,2],
+    "colors": ["#149DFF"]
+  },
+  "raspy-pixel": {
+    "like": "raspy-pixel",
+    "icons": [0,1,1,2],
+    "colors": ["#149DFF"]
+  },
+  "lemon-creature": {
+    "like": "lemon-creature",
+    "icons": [0,1,3,2],
+    "colors": ["#F3FF6E"]
+  },
+  "lemon-creature-speaker": {
+    "like": "lemon-creature-speaker",
+    "icons": [0,1,2],
+    "colors": ["#F3FF6E"]
+  },
+  "matt-ghost": {
+    "like": "matt",
+    "icons": [0,1],
+    "colors": ["#FF8C00"]
+  },
+
+  // Shaggy x Matt
+  "shaggy-red": {
+    "like": "shaggy-red",
+    "icons": [0,1],
+    "colors": ["#D11A1A"]
+  },
+
+  // Monsterfriend (& mod variants)
+  "mf": {
+    "like": "bf",
+    "icons": [0,1,3,2],
+    "colors": ["#F3FF6E"]
+  },
+  "mf-christmas": {
+    "like": "bf-christmas",
+    "icons": [0,1,3,2],
+    "colors": ["#F3FF6E"]
+  },
+  "mf-pixel": {
+    "like": "bf-pixel",
+    "icons": [21,21],
+    "colors": ["#F3FF6E"]
+  }
+}
