@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="give me a hand.png">
+	<!-- Created with Adobe Animate version 20.0.0.17400 -->
+	<!-- brains uhhhhhhhhhhhhhhhh -->
+	<SubTexture name="zombie raise0000" x="0" y="0" width="250" height="250"/>
+	<SubTexture name="zombie raise0001" x="0" y="0" width="250" height="250"/>
+	<SubTexture name="zombie raise0002" x="250" y="0" width="250" height="250"/>
+	<SubTexture name="zombie raise0003" x="250" y="0" width="250" height="250"/>
+	<SubTexture name="zombie raise0004" x="500" y="0" width="250" height="250"/>
+	<SubTexture name="zombie raise0005" x="500" y="0" width="250" height="250"/>
+	<SubTexture name="zombie raise0006" x="750" y="0" width="250" height="250"/>
+	<SubTexture name="zombie raise0007" x="750" y="0" width="250" height="250"/>
+	<SubTexture name="zombie raise0008" x="1000" y="0" width="250" height="250"/>
+	<SubTexture name="zombie raise0009" x="1000" y="0" width="250" height="250"/>
+	<SubTexture name="zombie grab0000" x="0" y="250" width="250" height="250"/>
+	<SubTexture name="zombie grab0001" x="0" y="250" width="250" height="250"/>
+	<SubTexture name="zombie grab0002" x="250" y="250" width="250" height="250"/>
+	<SubTexture name="zombie grab0003" x="250" y="250" width="250" height="250"/>
+	<SubTexture name="falling mic0000" x="500" y="250" width="250" height="250"/>
+</TextureAtlas>

@@ -1,0 +1,49 @@
+function init(char) {
+    var tex = FlxAtlasFrames.fromSparrow(hscriptPath + 'char.png', hscriptPath + 'char.xml');
+    
+    char.frames = tex;
+    char.animation.addByPrefix('idle', 'lemon groove', 24, false);
+    char.animation.addByPrefix('idle-twitch', 'lemon twitch', 24, false);
+    char.animation.addByPrefix('singUP', 'lemon north', 24, false);
+    char.animation.addByPrefix('singLEFT', 'lemon west', 24, false);
+    char.animation.addByPrefix('singRIGHT', 'lemon east', 24, false);
+    char.animation.addByPrefix('singDOWN', 'lemon south', 24, false);
+
+    char.addOffset('idle');
+    char.addOffset('idle-twitch');
+    char.addOffset('singUP');
+    char.addOffset('singDOWN');
+    char.addOffset('singRIGHT');
+    char.addOffset('singLEFT');
+
+    char.playAnim('idle');
+
+    char.flipX = true;
+
+    char.enemyOffsetX = -350;
+    char.enemyOffsetY = -100;
+    char.playerOffsetX = 75;
+    char.playerOffsetY = -440;
+    if (char.isPlayer) {
+        char.followCamX = -300;
+        char.followCamY = 100;
+    } else {
+        char.followCamX = 350;
+        char.followCamY = 0;
+    }
+    char.midpointX = 0;
+    char.midpointY = 0;
+}
+portraitOffset = [0, 0];
+dadVar = 4;
+isPixel = false;
+function update(elapsed, char) {
+    // do nothing...
+}
+var danced = false;
+function dance(char) {
+    if (FlxG.random.int(0, 9) == 0 && char.animation.curAnim.finished)
+	char.playAnim('idle-twitch');
+    else
+    	char.playAnim('idle');
+}

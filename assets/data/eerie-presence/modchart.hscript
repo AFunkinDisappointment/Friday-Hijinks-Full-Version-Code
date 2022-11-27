@@ -1,0 +1,98 @@
+var darkness;
+function start(song) {
+    gf.visible = false;
+    dad.alpha = 0;
+    iconP2.alpha = 0;
+
+    darkness = new FlxSprite().loadGraphic('assets/images/custom_stages/haunted-mansion/dark.png');
+    darkness.alpha = 0;
+    darkness.cameras = [camHUD];
+    addSprite(darkness, BEHIND_NONE);
+}
+
+function darker() {
+    new FlxTimer().start(0.01, function(tmr) {
+	darkness.alpha += 0.1;
+
+	if (darkness.alpha < 1) {
+	    tmr.reset(0.01);
+	} else {
+	    darkness.alpha = 1;
+	}
+    });
+}
+
+function lighten() {
+    new FlxTimer().start(0.01, function(tmr) {
+	darkness.alpha -= 0.1;
+
+	if (darkness.alpha > 0) {
+	    tmr.reset(0.01);
+	} else {
+	    darkness.alpha = 0;
+	}
+    });
+}
+
+function appear() {
+    new FlxTimer().start(0.1, function(tmr) {
+	dad.alpha += 0.1;
+	iconP2.alpha += 0.1;
+
+	if (dad.alpha < 1) {
+	    tmr.reset(0.1);
+	}
+    });
+}
+
+function beatHit(beat)
+{
+    switch(beat) {
+	case 28:
+	    tweenCamIn();
+	    appear();
+	case 80:
+	    darker();
+	case 88:
+	    lighten();
+	case 28*4:
+	    darker();
+    }
+}
+
+function update(elapsed)
+{
+    /*if (curBeat >= 27 && curBeat < 32 && boyfriend.animation.curAnim.name == 'idle' && boyfriend.animation.curAnim.finished)
+	boyfriend.playAnim('idle', true, false, 13);
+    if (curBeat >= 28 && curBeat < 32 && dad.animation.curAnim.name == 'idle')
+	dad.playAnim('idle', true, false, 13);*/
+}
+
+function stepHit(step)
+{
+}
+
+function playerTwoTurn()
+{
+    
+}
+
+function playerTwoMiss()
+{
+}
+
+function playerTwoSing()
+{
+}
+
+function playerOneTurn()
+{
+}
+
+function playerOneMiss()
+{
+}
+
+function playerOneSing()
+{
+}

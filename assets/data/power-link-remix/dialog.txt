@@ -1,0 +1,13 @@
+178[ [179[ [223[ [216[ |Lunchbox| *0* =1= #classic#  <0.08< >4> (0.2( )5) {0.83{ }5} `hand_textbox` ~clickText~  <0.08< >4> (0.2( )5) {0.83{ }5} `hand_textbox` ~clickText~
+:raspy: !default! [Pixel Arial 11 Bold[ ]32] *0* =0= +0+ -0- <0< >0> ;0.04; |false| #classic# ^pixelText^ !#FF3F2021! ?#FFD89494? .. ~~      You've come to this mansion to accept my training, right?
+:shaggy-red: !happy! [Pixel Arial 11 Bold[ ]32] *0* =0= +0+ -0- <0< >0> ;0.04; |true| #classic# ^pixelText^ !#FF3F2021! ?#FFD89494? .. ~~      Sure thing ma-
+:shaggy-red: !conflicted! [Pixel Arial 11 Bold[ ]32] *0* =0= +0+ -0- <0< >0> ;0.04; |true| #classic# ^pixelText^ !#FF3F2021! ?#FFD89494? .. ~~      Wait, who are you?
+:raspy: !default! [Pixel Arial 11 Bold[ ]32] *0* =0= +0+ -0- <0< >0> ;0.04; |false| #classic# ^pixelText^ !#FF3F2021! ?#FFD89494? .. ~~      Seems you didn't get the memo!
+:raspy: !smug! [Pixel Arial 11 Bold[ ]32] *0* =0= +0+ -0- <0< >0> ;0.04; |false| #classic# ^pixelText^ !#FF3F2021! ?#FFD89494? .. ~~      I am Raspy, the terrifying ghost that haunts this horrid establishment.
+:raspy: !smug! [Pixel Arial 11 Bold[ ]32] *0* =0= +0+ -0- <0< >0> ;0.04; |false| #classic# ^pixelText^ !#FF3F2021! ?#FFD89494? .. ~~      You are here to bow down to me because I'm clearly better than you.
+:shaggy-red: !angry! [Pixel Arial 11 Bold[ ]32] *0* =0= +0+ -0- <0< >0> ;0.04; |true| #classic# ^pixelText^ !#FF3F2021! ?#FFD89494? .. ~~      Says the person with a cardboard stick in their hand.
+:raspy: !awkward! [Pixel Arial 11 Bold[ ]32] *0* =0= +0+ -0- <0< >0> ;0.04; |false| #classic# ^pixelText^ !#FF3F2021! ?#FFD89494? .. ~~      What do you mean? This is crafted with the finest of metals!
+:raspy: !awkward! [Pixel Arial 11 Bold[ ]32] *0* =0= +0+ -0- <0< >0> ;0.04; |false| #classic# ^pixelText^ !#FF3F2021! ?#FFD89494? .. ~~      Could you just sing my song? I have a tight schedule.
+:shaggy-red: !ser! [Pixel Arial 11 Bold[ ]32] *0* =0= +0+ -0- <0< >0> ;0.3; |true| #classic# ^pixelText^ !#FF3F2021! ?#FFD89494? .. ~~      ...
+:shaggy-red: !smug! [Pixel Arial 11 Bold[ ]32] *0* =0= +0+ -0- <0< >0> ;0.04; |true| #classic# ^pixelText^ !#FF3F2021! ?#FFD89494? .. ~~      Heh, fine.
+:raspy: !ready! [Pixel Arial 11 Bold[ ]32] *0* =0= +0+ -0- <0< >0> ;0.04; |false| #classic# ^pixelText^ !#FF3F2021! ?#FFD89494? .. ~~      Try your best...

@@ -1,0 +1,73 @@
+function init(char) {
+    if (!char.isDie) {
+        var tex = FlxAtlasFrames.fromSparrow(hscriptPath + 'char.png', hscriptPath + 'char.xml');
+
+        char.frames = tex;
+        char.animation.addByPrefix('idle', 'matt idle', 20, false);
+        char.animation.addByPrefix('singUP', 'matt up note', 24, false);
+        char.animation.addByPrefix('singLEFT','matt left note', 24, false);
+        char.animation.addByPrefix('singRIGHT', 'matt right note', 24, false);
+        char.animation.addByPrefix('singDOWN', 'matt down note', 24, false);
+
+        char.animation.addByPrefix('singUPmiss', 'miss up', 24, false);
+        char.animation.addByPrefix('singLEFTmiss','miss left', 24, false);
+        char.animation.addByPrefix('singRIGHTmiss', 'miss right', 24, false);
+        char.animation.addByPrefix('singDOWNmiss', 'miss down', 24, false);
+
+        char.addOffset('idle');
+        char.addOffset('singUP', -41, 21);
+        char.addOffset('singRIGHT', -10, -14);
+        char.addOffset('singLEFT', 64, -24);
+        char.addOffset('singDOWN', -62, -19);
+        if (char.isPlayer) {
+     	    char.addOffset('singUP', -21, 21);
+    	    char.addOffset('singRIGHT', -40, -14);
+    	    char.addOffset('singLEFT', 63, -24);
+    	    char.addOffset('singDOWN', -30, -19);
+        }
+
+        char.addOffset('singUPmiss', -21, 21);
+        char.addOffset('singRIGHTmiss', -40, -14);
+        char.addOffset('singLEFTmiss', 63, -24);
+        char.addOffset('singDOWNmiss', -15, -28);
+
+        char.playAnim('idle');
+    } else {
+	var tex = FlxAtlasFrames.fromSparrow(hscriptPath + 'dead.png', hscriptPath + 'dead.xml');
+
+        char.frames = tex;
+        char.animation.addByPrefix('firstDeath', 'matt lose prev', 24, false);
+        char.animation.addByPrefix('deathLoop','matt lose idle', 24, true);
+        char.animation.addByPrefix('deathConfirm', 'matt lose retry', 24, false);
+
+        char.addOffset('firstDeath', -5, -3);
+        char.addOffset('deathLoop', 0, 10);
+        char.addOffset('deathConfirm', 0, 20);
+    }
+
+    char.flipX = false;
+
+    char.enemyOffsetX = 0;
+    char.enemyOffsetY = 320;
+    char.playerOffsetX = 0;
+    char.playerOffsetY = 0;
+    if (char.isPlayer) {
+        char.followCamX = 0;
+        char.followCamY = 0;
+    } else {
+        char.followCamX = 259;
+        char.followCamY = -100;
+    }
+    char.midpointX = 0;
+    char.midpointY = 0;
+}
+portraitOffset = [0, 0];
+dadVar = 4;
+isPixel = false;
+function update(elapsed, char) {
+    // do nothing...
+}
+var danced = false;
+function dance(char) {
+    char.playAnim('idle');
+}

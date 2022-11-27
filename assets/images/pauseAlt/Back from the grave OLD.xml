@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="pauseUI.png">
+	<!-- Created with Adobe Animate version 20.0.0.17400 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="zombie raise0000" x="0" y="0" width="175" height="135" frameX="-25" frameY="-55" frameWidth="175" frameHeight="135"/>
+	<SubTexture name="zombie raise0001" x="0" y="0" width="175" height="135" frameX="-25" frameY="-55" frameWidth="175" frameHeight="135"/>
+	<SubTexture name="zombie raise0002" x="200" y="0" width="200" height="150" frameX="0" frameY="-45" frameWidth="200" frameHeight="170"/>
+	<SubTexture name="zombie raise0003" x="200" y="0" width="200" height="150" frameX="0" frameY="-45" frameWidth="200" frameHeight="170"/>
+	<SubTexture name="zombie raise0004" x="400" y="0" width="175" height="160" frameX="0" frameY="-12" frameWidth="200" frameHeight="170"/>
+	<SubTexture name="zombie raise0005" x="400" y="0" width="175" height="160" frameX="0" frameY="-12" frameWidth="200" frameHeight="170"/>
+	<SubTexture name="zombie raise0006" x="585" y="0" width="170" height="170"/>
+	<SubTexture name="zombie raise0007" x="585" y="0" width="170" height="170"/>
+	<SubTexture name="zombie grab0000" x="50" y="256" width="170" height="190" frameX="-30" frameY="25" frameWidth="200" frameHeight="170"/>
+	<SubTexture name="falling mic0000" x="270" y="250" width="170" height="190" frameX="-10" frameY="0" frameWidth="200" frameHeight="170"/>
+</TextureAtlas>

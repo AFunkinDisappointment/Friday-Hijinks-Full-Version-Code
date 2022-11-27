@@ -1,0 +1,91 @@
+var darkness;
+function start(song) {
+    darkness = new FlxSprite().loadGraphic('assets/images/custom_stages/haunted-mansion/dark.png');
+    darkness.alpha = 0;
+    darkness.cameras = [camHUD];
+    addSprite(darkness, BEHIND_NONE);
+}
+
+function darker() {
+    new FlxTimer().start(0.05, function(tmr) {
+	darkness.alpha += 0.1;
+
+	if (darkness.alpha < 1) {
+	    tmr.reset(0.05);
+	} else {
+	    darkness.alpha = 1;
+	}
+    });
+}
+
+function lighten() {
+    new FlxTimer().start(0.05, function(tmr) {
+	darkness.alpha -= 0.05;
+
+	if (darkness.alpha > 0) {
+	    tmr.reset(0.05);
+	} else {
+	    darkness.alpha = 0;
+	}
+    });
+}
+
+function disappear() {
+    new FlxTimer().start(0.1, function(tmr) {
+	boyfriend.alpha -= 0.2;
+	iconP1.alpha -= 0.2;
+
+	if (boyfriend.alpha > 0) {
+	    tmr.reset(0.1);
+	}
+    });
+}
+
+function beatHit(beat)
+{
+    switch(beat) {
+	case 254:
+	    darker();
+	case 316:
+	    lighten();
+	case 448:
+	    disappear();
+    }
+}
+
+function update(elapsed)
+{
+    if (gf.alpha > 0) {
+	gf.playAnim('scared', true);
+        gf.alpha -= 0.1;
+    }
+}
+
+function stepHit(step)
+{
+}
+
+function playerTwoTurn()
+{
+    
+}
+
+function playerTwoMiss()
+{
+}
+
+function playerTwoSing()
+{
+}
+
+function playerOneTurn()
+{
+}
+
+function playerOneMiss()
+{
+}
+
+function playerOneSing()
+{
+}

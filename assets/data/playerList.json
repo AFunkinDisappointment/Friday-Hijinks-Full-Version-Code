@@ -1,0 +1,49 @@
+{
+  "bf": {
+    "userName": "boyfriendfnf",
+    "displayName": "Boyfriend",
+    "charImage": "null",
+    "friends": ["gf"]
+  },
+  "gf": {
+    "userName": "girlfriendfnf",
+    "displayName": "Girlfriend",
+    "charImage": "null",
+    "friends": ["bf"]
+  },
+  "raspy": {
+    "userName": "ghostman71223",
+    "displayName": "Raspy",
+    "charImage": "ghost"
+  },
+  "raspy-angry": {
+    "userName": "ghostman71223",
+    "displayName": "Raspy",
+    "charImage": "ghost"
+  },
+  "lemon-creature": {
+    "userName": "scarybeingofsourabilities",
+    "displayName": "LemonCreature",
+    "charImage": "lemon"
+  },
+  "lemon-creature-speaker": {
+    "userName": "scarybeingofsourabilities",
+    "displayName": "LemonCreature",
+    "charImage": "lemon"
+  },
+  "haydendpd": {
+    "userName": "HaydenDPD",
+    "displayName": "HaydenDPD",
+    "charImage": "robloxian"
+  },
+  "shaggy-red": {
+    "userName": "shaggyfnf",
+    "displayName": "Shaggy",
+    "charImage": "null"
+  },
+  "matt-ghost": {
+    "userName": "mattfnf",
+    "displayName": "Ghost",
+    "charImage": "null"
+  }
+}

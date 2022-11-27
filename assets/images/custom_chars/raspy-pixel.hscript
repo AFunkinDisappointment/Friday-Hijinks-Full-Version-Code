@@ -1,0 +1,49 @@
+function init(char) {
+    var tex = FlxAtlasFrames.fromSparrow(hscriptPath + 'char.png', hscriptPath + 'char.xml');
+    
+    char.frames = tex;
+    char.animation.addByPrefix('idle', 'raspy idle', 24, false);
+    char.animation.addByPrefix('singUP', 'raspy up', 32, false);
+    char.animation.addByPrefix('singLEFT', 'raspy left', 32, false);
+    char.animation.addByPrefix('singRIGHT', 'raspy right', 32, false);
+    char.animation.addByPrefix('singDOWN', 'raspy down', 32, false);
+
+    char.addOffset('idle');
+    char.addOffset('singUP');
+    char.addOffset('singDOWN');
+    char.addOffset('singRIGHT');
+    char.addOffset('singLEFT');
+
+    char.playAnim('idle');
+
+    char.setGraphicSize(Std.int(char.width * 10));
+    //char.updateHitbox();
+
+    char.isPixel = true;
+    char.flipX = false;
+    char.antialiasing = false;
+
+    char.enemyOffsetX = 300;
+    char.enemyOffsetY = 600;
+    char.playerOffsetX = 0;
+    char.playerOffsetY = 250;
+    if (char.isPlayer) {
+        char.followCamX = 0;
+        char.followCamY = -200;
+    } else {
+        char.followCamX = 150;
+        char.followCamY = -250;
+    }
+    char.midpointX = 0;
+    char.midpointY = 0;
+}
+portraitOffset = [0, 0];
+dadVar = 4;
+isPixel = true;
+function update(elapsed, char) {
+    // do nothing...
+}
+var danced = false;
+function dance(char) {
+    char.playAnim('idle');
+}

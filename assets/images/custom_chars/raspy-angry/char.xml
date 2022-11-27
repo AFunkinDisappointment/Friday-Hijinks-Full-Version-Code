@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="scary ghost angy.png">
+	<!-- Created with Adobe Animate version 20.0.0.17400 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="raspy idle0000" x="0" y="0" width="650" height="600" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="raspy idle0001" x="0" y="0" width="650" height="600" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="raspy idle0002" x="0" y="0" width="650" height="600" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="raspy idle0003" x="0" y="0" width="650" height="600" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="raspy idle0004" x="650" y="0" width="650" height="600" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="raspy idle0005" x="650" y="0" width="650" height="600" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="raspy idle0006" x="1300" y="0" width="650" height="600" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="raspy idle0007" x="1300" y="0" width="650" height="600" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="raspy idle0008" x="1950" y="0" width="650" height="600" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="raspy idle0009" x="1950" y="0" width="650" height="600" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="raspy idle0010" x="2600" y="0" width="650" height="600" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="raspy idle0011" x="2600" y="0" width="650" height="600" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="raspy idle0012" x="3250" y="0" width="650" height="600" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="raspy idle0013" x="3250" y="0" width="650" height="600" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="raspy left0000" x="0" y="600" width="650" height="600" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="raspy left0001" x="0" y="600" width="650" height="600" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="raspy left0002" x="650" y="600" width="650" height="600" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="raspy left0003" x="650" y="600" width="650" height="600" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="raspy left0004" x="1300" y="600" width="650" height="600" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="raspy left0005" x="1300" y="600" width="650" height="600" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="raspy left0006" x="1950" y="600" width="650" height="600" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="raspy left0007" x="1950" y="600" width="650" height="600" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="raspy left0008" x="1950" y="600" width="650" height="600" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="raspy left0009" x="1950" y="600" width="650" height="600" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="raspy down0000" x="2600" y="600" width="650" height="600" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="raspy down0001" x="2600" y="600" width="650" height="600" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="raspy down0002" x="3250" y="600" width="650" height="600" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="raspy down0003" x="3250" y="600" width="650" height="600" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="raspy down0004" x="0" y="1200" width="650" height="600" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="raspy down0005" x="0" y="1200" width="650" height="600" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="raspy down0006" x="650" y="1200" width="650" height="600" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="raspy down0007" x="650" y="1200" width="650" height="600" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="raspy right0000" x="1300" y="1200" width="650" height="600" frameX="-50" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="raspy right0001" x="1300" y="1200" width="650" height="600" frameX="-50" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="raspy right0002" x="1950" y="1200" width="650" height="600" frameX="-50" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="raspy right0003" x="1950" y="1200" width="650" height="600" frameX="-50" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="raspy right0004" x="2600" y="1200" width="650" height="600" frameX="-50" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="raspy right0005" x="2600" y="1200" width="650" height="600" frameX="-50" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="raspy right0006" x="3250" y="1200" width="650" height="600" frameX="-50" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="raspy right0007" x="3250" y="1200" width="650" height="600" frameX="-50" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="raspy right0008" x="0" y="1800" width="650" height="600" frameX="-50" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="raspy right0009" x="0" y="1800" width="650" height="600" frameX="-50" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="raspy right0010" x="650" y="1800" width="650" height="600" frameX="-50" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="raspy right0011" x="650" y="1800" width="650" height="600" frameX="-50" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="raspy up0000" x="1300" y="1800" width="650" height="750" frameX="100" frameY="50" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="raspy up0001" x="1300" y="1800" width="650" height="750" frameX="100" frameY="50" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="raspy up0002" x="1950" y="1800" width="650" height="750" frameX="100" frameY="50" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="raspy up0003" x="1950" y="1800" width="650" height="750" frameX="100" frameY="50" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="raspy up0004" x="2600" y="1800" width="650" height="750" frameX="100" frameY="50" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="raspy up0005" x="2600" y="1800" width="650" height="750" frameX="100" frameY="50" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="raspy up0006" x="3250" y="1800" width="650" height="750" frameX="100" frameY="50" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="raspy up0007" x="3250" y="1800" width="650" height="750" frameX="100" frameY="50" frameWidth="800" frameHeight="800"/>
+</TextureAtlas>

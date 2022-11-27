@@ -1,0 +1,150 @@
+
+function start(song) {
+
+}
+
+var redColor = 0xFF820000;
+
+function beatHit(beat) {
+    if (beat >= 300 && beat < 364) {
+	FlxG.camera.zoom += 0.1;
+    }
+    switch(beat) {
+	case 16:
+	    for (object in getUV('daStage')) {
+		FlxTween.color(object, 5, 0xFFFFFFFF, redColor);
+	    }
+            FlxTween.color(dad, 5, 0xFFFFFFFF, redColor);
+            FlxTween.color(gf, 5, 0xFFFFFFFF, redColor);
+            FlxTween.color(boyfriend, 5, 0xFFFFFFFF, redColor);
+	case 27:
+	    dad.followCamX -= 100;
+	    dad.followCamY -= 100;
+	    FlxTween.tween(FlxG.camera, {zoom: 1.5}, 1.5);
+	case 32:
+	    for (object in getUV('daStage')) {
+		FlxTween.color(object, 0.5, redColor, 0xFFFFFFFF);
+	    }
+	    FlxTween.color(dad, 0.5, redColor, 0xFFFFFFFF);
+	    FlxTween.color(gf, 0.5, redColor, 0xFFFFFFFF);
+	    FlxTween.color(boyfriend, 0.5, redColor, 0xFFFFFFFF);
+	    dad.followCamX += 100;
+	    dad.followCamY += 100;
+	    camZooming = true;
+	case 100:
+	    for (object in getUV('daStage')) {
+		FlxTween.color(object, 0.7, 0xFFFFFFFF, redColor);
+	    }
+            FlxTween.color(dad, 0.7, 0xFFFFFFFF, redColor);
+            FlxTween.color(gf, 0.7, 0xFFFFFFFF, redColor);
+            FlxTween.color(boyfriend, 0.7, 0xFFFFFFFF, redColor);
+	case 104:
+	    for (object in getUV('daStage')) {
+		FlxTween.color(object, 0.1, redColor, 0xFFFFFFFF);
+	    }
+	    FlxTween.color(dad, 0.1, redColor, 0xFFFFFFFF);
+	    FlxTween.color(gf, 0.1, redColor, 0xFFFFFFFF);
+	    FlxTween.color(boyfriend, 0.1, redColor, 0xFFFFFFFF);
+	case 300:
+	    for (object in getUV('daStage')) {
+		FlxTween.color(object, 0.2, 0xFFFFFFFF, 0xFF000000);
+	    }
+            FlxTween.color(dad, 0.2, 0xFFFFFFFF, redColor);
+            FlxTween.color(gf, 0.2, 0xFFFFFFFF, redColor);
+            FlxTween.color(boyfriend, 0.2, 0xFFFFFFFF, redColor);
+	case 364:
+	    for (object in getUV('daStage')) {
+		FlxTween.color(object, 9, 0xFF000000, redColor);
+	    }
+	case 396:
+	    for (object in getUV('daStage')) {
+		FlxTween.color(object, 8, redColor, 0xFFFFFFFF);
+	    }
+	    FlxTween.color(dad, 8, redColor, 0xFFFFFFFF);
+	    FlxTween.color(gf, 8, redColor, 0xFFFFFFFF);
+	    FlxTween.color(boyfriend, 8, redColor, 0xFFFFFFFF);
+    }
+}
+
+function stepHit(step) {
+    switch(step) {
+	case 400:
+	    camZooming = true; // just in case ;)
+	    FlxG.camera.zoom += 0.05;
+	case 404:
+	    FlxG.camera.zoom += 0.05;
+	case 406:
+	    FlxG.camera.zoom += 0.05;
+	case 408:
+	    FlxG.camera.zoom += 0.05;
+	case 412:
+	    FlxG.camera.zoom += 1;
+
+	case 528:
+	    camZooming = true; // just in case ;)
+	    FlxG.camera.zoom += 0.1;
+	case 532:
+	    FlxG.camera.zoom += 0.1;
+	case 536:
+	    FlxG.camera.zoom += 0.1;
+	case 540:
+	    FlxG.camera.zoom += 0.1;
+
+	case 656:
+	    camZooming = true; // just in case ;)
+	    FlxG.camera.zoom += 0.05;
+	case 658:
+	    FlxG.camera.zoom += 0.05;
+	case 660:
+	    FlxG.camera.zoom += 0.05;
+	case 662:
+	    FlxG.camera.zoom += 0.05;
+	case 664:
+	    FlxG.camera.zoom += 0.05;
+	case 666:
+	    FlxG.camera.zoom += 0.05;
+	case 668:
+	    FlxG.camera.zoom += 0.05;
+	case 670:
+	    FlxG.camera.zoom += 0.05;
+
+	case 1192:
+	    camZooming = true; // just in case ;)
+	    FlxG.camera.zoom += 0.5;
+	case 1194:
+	    FlxG.camera.zoom += 0.5;
+	case 1196:
+	    FlxG.camera.zoom += 0.5;
+	case 1198:
+	    FlxG.camera.zoom += 0.5;
+    }
+}
+
+function update(elapsed)
+{
+}
+
+function playerTwoTurn()
+{
+    
+}
+
+function playerTwoMiss()
+{
+}
+
+function playerTwoSing()
+{
+}
+
+function playerOneTurn()
+{
+}
+
+function playerOneMiss()
+{
+}
+
+function playerOneSing()
+{
+}

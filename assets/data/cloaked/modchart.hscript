@@ -1,0 +1,145 @@
+var spaceText;
+var darkness;
+function start(song) {
+    gf.visible = false;
+
+    darkness = new FlxSprite().loadGraphic('assets/images/custom_stages/haunted-mansion/dark.png');
+    darkness.alpha = 0;
+    darkness.cameras = [camHUD];
+    addSprite(darkness, BEHIND_NONE);
+
+    spaceText = new FlxText(750, 180, 400, 'Press Space to use your flashlight!', 32);
+    if(downscroll)
+	spaceText.y = 460;
+    spaceText.alignment = 'center';
+    spaceText.font = "assets/fonts/vcr.ttf";
+    spaceText.color = 0xFFFF0000;
+    spaceText.cameras = [camHUD];
+    addSprite(spaceText, BEHIND_NONE);
+}
+
+function ghostKill() {
+    new FlxTimer().start(2.5, function(tmr) {
+        dad.x = boyfriend.x - 450;
+        dad.alpha = 1;
+	darkness.alpha = 0;
+        dad.playAnim('slashUP');
+	boyfriend.playAnim('hit');
+        FlxG.sound.play(FNFAssets.getSound('assets/images/custom_stages/haunted-mansion/machete-swing.ogg'));
+        new FlxTimer().start(0.5, function(tmr) {
+            dad.playAnim('slashDOWN');
+            new FlxTimer().start(0.1, function(tmr) {
+                FlxG.sound.play(FNFAssets.getSound('assets/images/custom_stages/haunted-mansion/machete-hit.ogg'));
+                healthChange(0);
+            });
+        });
+        
+    });
+}
+
+var flashReady = true;
+var flashDelay = 1;
+function rechargeFlash() {
+    new FlxTimer().start(flashDelay, function(tmr) {
+	flashReady = true;
+    });
+}
+
+var darkening = false;
+var darkeningRate = 0.02;
+function beatHit(beat)
+{
+    switch(beat) {
+	case 16:
+	    spaceText.visible = false;
+	case 56:
+	    darkening = true;
+	case 72:
+	    darkening = true;
+	case 87:
+	    darkening = true;
+	case 104:
+	    darkeningRate = 0.03;
+	    dad.alpha = 0.8;
+	    darkness.alpha = 0.2;
+	    darkening = true;
+	case 119:
+	    darkening = true;
+	case 128:
+	    darkening = true;
+	case 140:
+	    darkeningRate = 0.05;
+	    darkening = true;
+	case 148:
+	    darkening = true;
+	case 156:
+	    darkening = true;
+	case 164:
+	    darkening = true;
+	case 172:
+	    darkening = false;
+    }
+}
+
+var alreadyDead = false;
+function update(elapsed)
+{
+    if (FlxG.keys.justPressed.SPACE && flashReady) {
+        FlxG.sound.play(FNFAssets.getSound('assets/images/custom_stages/haunted-mansion/flashlight-click.ogg'));
+        if (darkening) {
+            darkening = false;
+	    dad.alpha = 1;
+	    darkness.alpha = 0;
+            healthChange(0.2, true); //I had to code it in, ok? Health isn't a easy thing to change.
+        } else {
+	    healthChange(-0.4, true);
+	    boyfriend.playAnim('hit', true);
+        }
+        flashReady = false;
+        rechargeFlash();
+     }
+
+     if (FlxG.keys.justPressed.SPACE && curBeat < 16)
+	spaceText.text = 'Only flash when necessary!';
+
+     if (dad.alpha <= 0 && !alreadyDead) {
+        alreadyDead = true;
+        darkening = false;
+        endCareer();
+        FlxG.sound.play(FNFAssets.getSound('assets/images/custom_stages/haunted-mansion/woosh-start.ogg'));
+	ghostKill();
+     }
+}
+
+function stepHit(step)
+{
+    if (darkening && dad.alpha > 0) {
+	dad.alpha -= darkeningRate;
+	darkness.alpha += darkeningRate;
+    }
+}
+
+function playerTwoTurn()
+{
+
+}
+
+function playerTwoMiss()
+{
+}
+
+function playerTwoSing()
+{
+}
+
+function playerOneTurn()
+{
+}
+
+function playerOneMiss()
+{
+}
+
+function playerOneSing()
+{
+}

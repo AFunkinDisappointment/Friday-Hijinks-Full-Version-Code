@@ -1,0 +1,63 @@
+function init(char) {
+    var tex = FlxAtlasFrames.fromSparrow(hscriptPath + 'char.png', hscriptPath + 'char.xml');
+
+    char.frames = tex;
+    char.animation.addByPrefix('idle', 'shaggy_idle0', 30, false);
+    char.animation.addByPrefix('idle2', 'shaggy_idle2', 30, false);
+    char.animation.addByPrefix('singUP', 'shaggy_up', 30, false);
+    char.animation.addByPrefix('singLEFT','shaggy_left', 30, false);
+    char.animation.addByPrefix('singRIGHT', 'shaggy_right', 30, false);
+    char.animation.addByPrefix('singDOWN', 'shaggy_down', 30, false);
+    char.animation.addByPrefix('standUP', 'shaggy_stand0', 30, false);
+    char.animation.addByPrefix('sit', 'shaggy_sit0', 30, false);
+
+    char.addOffset('idle');
+    if (char.isPlayer) {
+        char.addOffset('idle2', -30);
+        char.addOffset('singUP', -43, 28);
+        char.addOffset('singRIGHT', -70, -110);
+        char.addOffset('singLEFT', 127, -40);
+        char.addOffset('singDOWN', 80, -160);
+    } else {
+        char.addOffset('idle2', -1);
+        char.addOffset('singUP', -16, 27);
+        char.addOffset('singRIGHT', -1, -43);
+        char.addOffset('singLEFT', 165, -114);
+        char.addOffset('singDOWN', -10, -160);
+    }
+    char.addOffset('standUP', 33);
+    char.addOffset('sit', 29, -218);
+
+    char.playAnim('idle');
+
+    char.flipX = false;
+
+    char.enemyOffsetX = 0;
+    char.enemyOffsetY = 0;
+    char.playerOffsetX = 170;
+    char.playerOffsetY = -300;
+    if (char.isPlayer) {
+        char.followCamX = -600;
+        char.followCamY = 0;
+    } else {
+        char.followCamX = 110;
+        char.followCamY = -50;
+    }
+    char.midpointX = 0;
+    char.midpointY = 0;
+}
+portraitOffset = [0, 0];
+dadVar = 4;
+isPixel = false;
+function update(elapsed, char) {
+    // do nothing...
+}
+var danced = false;
+function dance(char) {
+    danced = !danced;
+    if (danced) {
+        char.playAnim('idle2');
+    } else {
+        char.playAnim('idle');
+    }
+}

@@ -1,0 +1,50 @@
+function init(char) {
+    var tex = FlxAtlasFrames.fromSparrow(hscriptPath + 'char.png', hscriptPath + 'char.xml');
+    
+    char.frames = tex;
+    char.animation.addByPrefix('idle', 'raspy idle', 24, false);
+    char.animation.addByPrefix('singUP', 'raspy up', 32, false);
+    char.animation.addByPrefix('singLEFT','raspy left', 32, false);
+    char.animation.addByPrefix('singRIGHT', 'raspy right', 32, false);
+    char.animation.addByPrefix('singDOWN', 'raspy down', 32, false);
+    char.animation.addByPrefix('slashDOWN', 'raspy slash down', 48, false);
+    char.animation.addByPrefix('slashUP', 'raspy slash up', 48, false);
+
+    char.addOffset('idle');
+    char.addOffset('singUP');
+    char.addOffset('singDOWN');
+    char.addOffset('singRIGHT');
+    char.addOffset('singLEFT');
+    char.addOffset('slashDOWN');
+    char.addOffset('slashUP');
+
+    char.playAnim('idle');
+
+    char.setGraphicSize(Std.int(char.width * 1.2));
+
+    char.flipX = false;
+
+    char.enemyOffsetX = 0;
+    char.enemyOffsetY = 0;
+    char.playerOffsetX = -250;
+    char.playerOffsetY = -350;
+    if (char.isPlayer) {
+        char.followCamX = 50;
+        char.followCamY = 0;
+    } else {
+        char.followCamX = 150;
+        char.followCamY = -100;
+    }
+    char.midpointX = 0;
+    char.midpointY = 0;
+}
+portraitOffset = [0, 0];
+dadVar = 4;
+isPixel = false;
+function update(elapsed, char) {
+    // do nothing...
+}
+var danced = false;
+function dance(char) {
+    char.playAnim('idle');
+}

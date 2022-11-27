@@ -1,0 +1,81 @@
+function start(song) {
+    gf.visible = false;
+    camZooming = true;
+}
+
+
+function beatHit(beat)
+{
+    if (beat >= 96 && beat < 160) {
+	FlxG.camera.zoom += 0.03;
+        camHUD.zoom += 0.02;
+    }
+    switch(beat) {
+	case 96:
+	    FlxG.camera.zoom += 0.1;
+            camHUD.zoom += 0.08;
+	case 98:
+	    FlxG.camera.zoom += 0.1;
+            camHUD.zoom += 0.08;
+	case 102:
+	    FlxG.camera.zoom += 0.1;
+            camHUD.zoom += 0.08;
+	case 104:
+	    FlxG.camera.zoom += 0.1;
+            camHUD.zoom += 0.08;
+	case 106:
+	    FlxG.camera.zoom += 0.1;
+            camHUD.zoom += 0.08;
+	case 128:
+	    FlxG.camera.zoom += 0.1;
+            camHUD.zoom += 0.08;
+	case 130:
+	    FlxG.camera.zoom += 0.1;
+            camHUD.zoom += 0.08;
+	case 134:
+	    FlxG.camera.zoom += 0.1;
+            camHUD.zoom += 0.08;
+	case 136:
+	    FlxG.camera.zoom += 0.1;
+            camHUD.zoom += 0.08;
+	case 138:
+	    FlxG.camera.zoom += 0.1;
+            camHUD.zoom += 0.08;
+    }
+}
+
+function update(elapsed)
+{
+}
+
+function stepHit(step)
+{
+}
+
+function playerTwoTurn()
+{
+    
+}
+
+function playerTwoMiss()
+{
+}
+
+function playerTwoSing()
+{
+    if (curBeat >= 94 && curBeat < 96) {
+	FlxG.camera.shake(0.04, 0.08);
+    }
+}
+
+function playerOneTurn()
+{
+}
+
+function playerOneMiss()
+{
+}
+
+function playerOneSing()
+{
+}

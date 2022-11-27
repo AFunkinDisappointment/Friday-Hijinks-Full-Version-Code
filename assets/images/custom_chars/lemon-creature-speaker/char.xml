@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="scary ghost.png">
+	<!-- Created with Adobe Animate version 20.0.0.17400 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="lemon groove0000" x="0" y="0" width="800" height="800" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="lemon groove0001" x="0" y="0" width="800" height="800" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="lemon groove0002" x="800" y="0" width="800" height="800" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="lemon groove0003" x="800" y="0" width="800" height="800" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="lemon groove0004" x="1600" y="0" width="800" height="800" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="lemon groove0005" x="1600" y="0" width="800" height="800" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="lemon groove0006" x="2400" y="0" width="800" height="800" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="lemon groove0007" x="2400" y="0" width="800" height="800" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="lemon groove0008" x="2400" y="0" width="800" height="800" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="lemon groove0009" x="2400" y="0" width="800" height="800" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="lemon groove0010" x="2400" y="0" width="800" height="800" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="lemon groove0011" x="2400" y="0" width="800" height="800" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="lemon groove0012" x="2400" y="0" width="800" height="800" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="lemon groove0013" x="2400" y="0" width="800" height="800" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="lemon east0000" x="0" y="800" width="800" height="800" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="lemon east0001" x="0" y="800" width="800" height="800" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="lemon east0002" x="800" y="800" width="800" height="800" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="lemon east0003" x="800" y="800" width="800" height="800" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="lemon east0004" x="1600" y="800" width="800" height="800" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="lemon east0005" x="1600" y="800" width="800" height="800" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="lemon east0006" x="1600" y="800" width="800" height="800" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="lemon east0007" x="1600" y="800" width="800" height="800" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="lemon north0000" x="2400" y="800" width="800" height="800" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="lemon north0001" x="2400" y="800" width="800" height="800" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="lemon north0002" x="0" y="1600" width="800" height="800" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="lemon north0003" x="0" y="1600" width="800" height="800" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="lemon north0004" x="800" y="1600" width="800" height="800" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="lemon north0005" x="800" y="1600" width="800" height="800" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="lemon north0006" x="800" y="1600" width="800" height="800" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="lemon north0007" x="800" y="1600" width="800" height="800" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="lemon south0000" x="1600" y="1600" width="800" height="800" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="lemon south0001" x="1600" y="1600" width="800" height="800" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="lemon south0002" x="2400" y="1600" width="800" height="800" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="lemon south0003" x="2400" y="1600" width="800" height="800" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="lemon south0004" x="0" y="2400" width="800" height="800" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="lemon south0005" x="0" y="2400" width="800" height="800" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="lemon south0006" x="0" y="2400" width="800" height="800" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="lemon south0007" x="0" y="2400" width="800" height="800" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="lemon west0000" x="800" y="2400" width="800" height="800" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="lemon west0001" x="800" y="2400" width="800" height="800" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="lemon west0002" x="1600" y="2400" width="800" height="800" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="lemon west0003" x="1600" y="2400" width="800" height="800" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="lemon west0004" x="2400" y="2400" width="800" height="800" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="lemon west0005" x="2400" y="2400" width="800" height="800" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="lemon west0006" x="2400" y="2400" width="800" height="800" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+	<SubTexture name="lemon west0007" x="2400" y="2400" width="800" height="800" frameX="100" frameY="-100" frameWidth="800" frameHeight="800"/>
+</TextureAtlas>

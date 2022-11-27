@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="roblox menu.png">
+	<!-- Created with Adobe Animate version 20.0.0.17400 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="boxFalse0000" x="0" y="0" width="800" height="158"/>
+	<SubTexture name="boxTrue0000" x="0" y="158" width="800" height="158"/>
+	<SubTexture name="boxBlink0000" x="0" y="0" width="800" height="158"/>
+	<SubTexture name="boxBlink0001" x="0" y="158" width="800" height="158"/>
+	<SubTexture name="boxBlink0002" x="0" y="0" width="800" height="158"/>
+	<SubTexture name="boxBlink0003" x="0" y="158" width="800" height="158"/>
+	<SubTexture name="boxBlink0004" x="0" y="0" width="800" height="158"/>
+	<SubTexture name="boxBlink0005" x="0" y="158" width="800" height="158"/>
+	<SubTexture name="boxBlink0006" x="0" y="0" width="800" height="158"/>
+	<SubTexture name="boxBlink0007" x="0" y="158" width="800" height="158"/>
+</TextureAtlas>
